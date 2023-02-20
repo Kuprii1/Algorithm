@@ -9,8 +9,8 @@ class TA1
         int flag = 0;
         try
         {
-            Console.WriteLine("1.Ввести з консолі");
-            Console.WriteLine("2.Зчитати з файлу");
+            Console.WriteLine("1.Input in console");
+            Console.WriteLine("2.Read from file");
             flag = Convert.ToInt32(Console.ReadLine());
             Input(locate + "in.txt", out int n, out int[] array, flag);
             var timer = new Stopwatch();
@@ -18,7 +18,7 @@ class TA1
             SwapMinAndMax(n, array);
             timer.Stop();
             Output(locate + "out", array, flag);
-            Console.WriteLine("Час виконання:" + timer.Elapsed);
+            Console.WriteLine("Time for working:" + timer.Elapsed);
             Console.ReadKey();
         }
         catch (Exception)
@@ -41,7 +41,7 @@ class TA1
         {
             Console.Write("n:");
             n = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Масив:");
+            Console.Write("Array:");
             lines[1] = Console.ReadLine()!;
         }
         array = new int[n];
@@ -57,7 +57,7 @@ class TA1
                 File.WriteAllLines(locate, lines);
             else
             {
-                Console.Write("Рандомний масив:");
+                Console.Write("Random array:");
                 Console.WriteLine(lines[1]);
             }
         }
@@ -95,7 +95,7 @@ class TA1
             await File.WriteAllTextAsync(locate, line);
         else
         {
-            Console.Write("Вихідний масив:");
+            Console.Write("Output array:");
             Console.WriteLine(line);
         }
     }
