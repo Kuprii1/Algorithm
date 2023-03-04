@@ -3,8 +3,9 @@
 
 namespace KP2;
 
-class Algorithm
+class Dikstri
 {
+
     private Dictionary<int, string> Way = new Dictionary<int, string>()
     {
         [1] = "Червоний унiверситет",
