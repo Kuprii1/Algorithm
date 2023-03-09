@@ -47,7 +47,7 @@ class Program
 
 
         int shortestPath = FindShortestPath(Grid, 7, 7, 4, 4);
-        Console.WriteLine("The shortest path between (0, 0) and (4, 4) is: " + shortestPath);
+        Console.WriteLine("The shortest path between (7, 7) and (4, 4) is: " + shortestPath);
         time.Stop();
         Console.WriteLine($"time is {time.ElapsedMilliseconds} ms");
     }
