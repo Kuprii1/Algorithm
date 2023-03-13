@@ -9,11 +9,12 @@ class TA1
         int flag = 0;
         try
         {
+
             Console.WriteLine("1.Input in console");
             Console.WriteLine("2.Read from file");
             flag = Convert.ToInt32(Console.ReadLine());
             Input(locate + "in.txt", out int n, out int[] array, flag);
-            var timer = new Stopwatch();
+            var timer = new Stopwatch();//m
             timer.Start();
             SwapMinAndMax(n, array);
             timer.Stop();
@@ -50,7 +51,7 @@ class TA1
             var rand = new Random(Guid.NewGuid().GetHashCode());
             for (int i = 0; i < n; i++)
             {
-                array[i] = rand.Next(-100,100);
+                array[i] = rand.Next(-100, 100);
             }
             lines[1] = string.Join(" ", array);
             if (flag == 2)
@@ -99,5 +100,5 @@ class TA1
             Console.WriteLine(line);
         }
     }
-    
+
 }
